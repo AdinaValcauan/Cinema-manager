@@ -1,0 +1,15 @@
+dao\ReservationsDAO.class
+connection\ConnectionFactory.class
+model\Movies.class
+model\Genres.class
+model\Seats.class
+model\Person.class
+Main.class
+model\Reservations.class
+model\Users.class
+bll\validators\Validator.class
+dao\MoviesDAO.class
+bll\validators\EmailValidator.class
+bll\PersonBLL.class
+dao\PersonDAO.class
+model\Admin.class
