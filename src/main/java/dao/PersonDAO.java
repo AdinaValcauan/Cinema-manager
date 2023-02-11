@@ -22,8 +22,8 @@ public class PersonDAO {
             insertStatement = dbConnection.prepareStatement(insertStatementString, Statement.RETURN_GENERATED_KEYS);
             insertStatement.setInt(1, person.getId_person());
             insertStatement.setString(2, person.getEmail());
-            insertStatement.setString(3, person.getFirst_name());
-            insertStatement.setString(4, person.getLast_name());
+            insertStatement.setString(3, person.getFirstName());
+            insertStatement.setString(4, person.getLastName());
             insertStatement.setString(5, person.getUsername());
             insertStatement.setString(6, person.getPassword());
             insertStatement.executeUpdate();
@@ -39,5 +39,22 @@ public class PersonDAO {
             ConnectionFactory.close(dbConnection);
         }
         return insertedId;
+    }
+
+    public static boolean checkCredentials(String username, char[] password) {
+        boolean result = false;
+        Connection connection = ConnectionFactory.getConnection();
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM person WHERE username = '" + username + "' AND password = '" + new String(password) + "'");
+            if (rs.next()) {
+                result = true;
+            }
+        } catch (SQLException e) {
+            LOGGER.log(Level.WARNING, "An error occurred while checking the credentials");
+            e.printStackTrace();
+        }
+        ConnectionFactory.close(connection);
+        return result;
     }
 }

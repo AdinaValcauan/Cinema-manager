@@ -26,7 +26,7 @@ CREATE TABLE `person` (
   `id_person` int NOT NULL,
   `email` varchar(45) DEFAULT NULL,
   `first_name` varchar(45) NOT NULL,
-  `last_name` varchar(45) NOT NULL,
+  `lastName` varchar(45) NOT NULL,
   `username` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY (`id_person`),

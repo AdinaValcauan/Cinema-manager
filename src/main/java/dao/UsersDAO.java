@@ -24,8 +24,8 @@ public class UsersDAO {
             insertStatement1 = dbConnection.prepareStatement(insertStatementString1, Statement.RETURN_GENERATED_KEYS);
             insertStatement1.setInt(1, users.getId_person());
             insertStatement1.setString(2, users.getEmail());
-            insertStatement1.setString(3, users.getFirst_name());
-            insertStatement1.setString(4, users.getLast_name());
+            insertStatement1.setString(3, users.getFirstName());
+            insertStatement1.setString(4, users.getLastName());
             insertStatement1.setString(5, users.getUsername());
             insertStatement1.setString(6, users.getPassword());
             insertStatement1.executeUpdate();
