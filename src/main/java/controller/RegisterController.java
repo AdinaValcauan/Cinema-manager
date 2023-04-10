@@ -32,7 +32,6 @@ public class RegisterController implements ActionListener{
 
                 ConnectionFactory.close(connection);
 
-                //TODO: make the registration process more complex
         }
 
 
