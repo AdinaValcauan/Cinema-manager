@@ -33,12 +33,5 @@ public class Main {
         //Users users = new Users(7,"ionutpop@gmail.com","Ionut","Pop","ionu","pi78", "1 month");
         //UsersDAO.insert(users);
 
-        /*TODO: I want an welcome page, where I can choose login and register
-        TODO: make the reservation page
-        TODO: menu for admin and basic users
-        TODO: iiiif it's possible I want to see all my reservations and for the admins all the reservations. they should be able to modify it
-        TODO: for admins is place for improvements, but they are details*/
-
-
     }
 }
